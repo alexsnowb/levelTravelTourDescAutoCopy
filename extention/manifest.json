@@ -1,0 +1,10 @@
+{
+  "name": "Copy Level.Travel tour desc",
+  "version": "1.0",
+  "manifest_version": 2,
+  "content_scripts": [{
+    "js": ["content_scripts/end.js"],
+    "matches": ["https://level.travel/packages/*"],
+    "run_at": "document_idle"
+  }]
+}
