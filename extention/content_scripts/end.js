@@ -3,7 +3,7 @@ setTimeout(parse, 1000)
 function parse() {
 
     if(typeof document.getElementsByClassName('checkout-packageinfo__row--content')[0] === 'undefined') {
-        setTimeout(parse, 1000);
+        setTimeout(parse, 500);
     }
 
     var text5 = '';
@@ -17,7 +17,7 @@ function parse() {
         + '\n' + document.getElementsByClassName('checkout-packageinfo__row--content')[2].getElementsByClassName('checkout-packageinfo__text')[0].innerText.split('.')[0]
         + '\n' + document.getElementsByClassName('checkout-packageinfo__row--content')[3].getElementsByClassName('checkout-packageinfo__text')[0].innerText.split('\n').join(' ').replace(/\s{2,}/g, ' ')
         + '\n' + document.getElementsByClassName('checkout-packageinfo__row--content')[4].innerText
-        + text5
+        + '\n' + text5
     ;
     console.log(text);
     navigator.clipboard.writeText(text).then(function() {
