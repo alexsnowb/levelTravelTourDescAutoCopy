@@ -5,7 +5,7 @@ document.onkeyup = function (e) {
 };
 
     function copyTitle() {
-        var result = '';
+        let result = '';
 
         var titleList = document.getElementsByClassName("catalogs-ttl-a");
         for (var i = 0; i < titleList.length; i++) {
@@ -17,9 +17,10 @@ document.onkeyup = function (e) {
             title = title.replace(' 3*', '');
             title = title.replace(' 2*', '');
             title = title.replace(' 1*', '');
+            title = title.replace(' &', '');
 
 
-            result.concat(title);
+            result = result.concat(title,'\n');
 
         }
 
