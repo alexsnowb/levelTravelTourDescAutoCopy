@@ -1,4 +1,8 @@
-setTimeout(parse, 1000)
+document.onkeyup = function (e) {
+    if ((e.ctrlKey && e.key === 'm')|| (e.ctrlKey && e.key === 'ь')) {
+        parse();
+    }
+};
 
 function parse() {
 
